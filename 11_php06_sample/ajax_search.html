@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>リアルタイム検索型todoリスト</title>
+</head>
+
+<body>
+  <fieldset>
+    <legend>リアルタイム検索型todoリスト</legend>
+    <a href="ajax_input.php">入力画面</a>
+    <div>
+      検索フォーム：<input type="text" id="search">
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>deadline</th>
+          <th>todo</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ここに<tr><td>deadline</td><td>todo</td><tr>の形でデータが入る -->
+      </tbody>
+    </table>
+  </fieldset>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    $('#search').on('keyup', function (e) {
+      console.log(e.target.value);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/sample.css">
+  <title>じゃんけん</title>
+</head>
+
+<body>
+  <header>
+    <h1>じゃんけん</h1>
+  </header>
+
+  <main>
+    <ul>
+      <li id="gu">グー</li>
+      <li id="cho">チョキ</li>
+      <li id="par">パー</li>
+    </ul>
+    <div id="computer_hand">コンピュータの出した手は？</div>
+    <div id="result">結果は？</div>
+  </main>
+
+  <footer>フッター</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+
+    // 指定した範囲で乱数をつくる関数
+    function createRandomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    // 0から2を入れるとじゃんけんの手を出力する関数
+    function getComputerHand(randomNumber) {
+      return ['グー', 'チョキ', 'パー'][randomNumber];
+    };
+
+    // 自分の数値と敵の数値を入れると結果を出力する関数
+    function getJankenResult(myHandNumber, computerHandNumber) {
+      return [
+        ['draw', 'win', 'lose'],
+        ['lose', 'draw', 'win'],
+        ['win', 'lose', 'draw'],
+      ][myHandNumber][computerHandNumber];
+    };
+
+    $('#gu').on('click', function () {
+      // 自分の手はグー（自分の数値が0）
+      const randomNumber = createRandomNumber(0, 2);
+      $('#computer_hand').text('コンピュータの手：' + getComputerHand(randomNumber));
+      $('#result').text('結果：' + getJankenResult(0, randomNumber));
+    });
+
+    $('#cho').on('click', function () {
+      // 自分の手はチョキ（自分の数値が1）
+      const randomNumber = createRandomNumber(0, 2);
+      $('#computer_hand').text('コンピュータの手：' + getComputerHand(randomNumber));
+      $('#result').text('結果：' + getJankenResult(1, randomNumber));
+    });
+
+    $('#par').on('click', function () {
+      // 自分の手はパー（自分の数値が2）
+      const randomNumber = createRandomNumber(0, 2);
+      $('#computer_hand').text('コンピュータの手：' + getComputerHand(randomNumber));
+      $('#result').text('結果：' + getJankenResult(2, randomNumber));
+    });
+
+  </script>
+
+</body>
+
+</html>
