@@ -1,0 +1,54 @@
+
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body{
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+
+
+
+
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
