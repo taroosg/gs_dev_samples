@@ -20,7 +20,7 @@
 |-|入学式|チーズアカデミーの案内．|
 |HTML / CSS|0回目|エディタとブラウザの準備．|
 |JS|おみくじ|エディタとブラウザの準備．|
-|Git|CLI / Git / GitHub|【全員】GitHubアカウントの準備<br>【Windowsユーザ】GitBashのインストール|
+|Git|CLI / Git / GitHub|【全員】GitHubアカウントの準備<br>【Macユーザ】xcode command line toolのインストール<br>【Windowsユーザ】GitBashのインストール|
 |JS|メモ帳|特になし．|
 |JS|Firebase|Googleアカウントの準備．|
 |JS|API|Microsoftアカウントの準備．|
